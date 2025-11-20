@@ -1,0 +1,28 @@
+ * { margin:0; padding:0; box-sizing:border-box; }
+    html,body { height:100%; overflow:hidden; background:#000; font-family:monospace; }
+
+    /* canvas full-screen */
+    canvas#binaryCanvas {
+      position:fixed;
+      inset:0;            /* top:0; right:0; bottom:0; left:0; */
+      width:100%;
+      height:100%;
+      z-index:0;
+      display:block;
+    }
+
+    /* texto centrado y visible encima del canvas */
+    .mensaje {
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      color:#00aaff;         /* azul */
+      font-size:3.0rem;
+      font-weight:700;
+      text-align:center;
+      z-index:9999;          /* importante: muy por encima */
+      pointer-events:none;
+      -webkit-text-stroke: 0.5px rgba(0,0,0,0.2);
+      text-shadow: 0 0 20px rgba(0, 170, 255, 0.837);
+    }
